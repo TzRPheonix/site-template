@@ -1,0 +1,19 @@
+.footer-style-1 {
+    background-color: var(--primary-color, #333); /* Couleur principale par défaut */
+    color: var(--secondary-color, white); /* Couleur secondaire par défaut */
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-style-1 a {
+    color: var(--secondary-color, #f0c040); /* Couleur secondaire */
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .footer-style-1 a:hover {
+    text-decoration: underline;
+    color: var(--primary-color, #f0c040); /* Couleur principale au survol */
+  }
+  

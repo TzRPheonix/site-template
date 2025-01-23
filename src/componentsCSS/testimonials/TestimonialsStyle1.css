@@ -1,0 +1,46 @@
+.testimonials-style-1 {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--secondary-color, #f9f9f9); /* Couleur secondaire */
+}
+
+.testimonials-style-1 h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: var(--primary-color, #333); /* Couleur principale */
+}
+
+.testimonials-style-1 .testimonials {
+  display: flex;
+  flex-direction: column; /* Aligne les avis verticalement */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+.testimonials-style-1 .testimonial-card {
+  background: var(--secondary-color, #fff); /* Couleur secondaire */
+  border: 1px solid var(--primary-color, #ddd); /* Couleur principale */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonials-style-1 .testimonial-card .feedback {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--primary-color, #555); /* Couleur principale */
+  margin-bottom: 10px;
+}
+
+.testimonials-style-1 .testimonial-card .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color, #333); /* Couleur principale */
+  margin-bottom: 5px;
+}
+
+.testimonials-style-1 .testimonial-card .position {
+  font-size: 14px;
+  color: var(--primary-color, #888); /* Couleur principale */
+}

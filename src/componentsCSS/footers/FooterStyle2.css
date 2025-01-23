@@ -1,0 +1,57 @@
+.footer-style-2 {
+    background-color: var(--primary-color, #222); /* Utilise la couleur principale par défaut */
+    color: var(--secondary-color, white); /* Couleur secondaire par défaut */
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  
+  .footer-style-2 .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-style-2 .footer-column {
+    flex: 1;
+  }
+  
+  .footer-style-2 .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--secondary-color, white); /* Couleur secondaire */
+  }
+  
+  .footer-style-2 .footer-column p,
+  .footer-style-2 .footer-column ul {
+    margin: 0;
+    line-height: 1.8;
+  }
+  
+  .footer-style-2 .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-style-2 .footer-column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-style-2 .footer-column a {
+    color: var(--secondary-color, #f0c040); /* Couleur secondaire */
+    text-decoration: none;
+  }
+  
+  .footer-style-2 .footer-column a:hover {
+    text-decoration: underline;
+    color: var(--primary-color, #f0c040); /* Couleur principale */
+  }
+  
+  .footer-style-2 .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid var(--secondary-color, #444); /* Utilise la couleur secondaire */
+    padding-top: 10px;
+    color: var(--secondary-color, white); /* Couleur secondaire */
+  }
+  

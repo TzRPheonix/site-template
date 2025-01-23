@@ -1,0 +1,43 @@
+.services-style-2 {
+  text-align: center;
+  color: var(--primary-color, #333); /* Couleur principale */
+}
+
+.services-style-2 h2 {
+  color: var(--primary-color, #333); /* Couleur principale */
+}
+
+.services-style-2 .cards {
+  display: flex;
+  flex-direction: column; /* Colonne pour l'alignement vertical */
+  gap: 20px; /* Espacement entre les cartes */
+  padding: 20px;
+}
+
+.services-style-2 .card {
+  background: var(--secondary-color, #fff); /* Couleur secondaire */
+  border: 1px solid var(--primary-color, #ddd); /* Couleur principale */
+  border-radius: 5px;
+  padding: 20px;
+  width: 60%; /* Largeur réduite pour l'alignement à gauche/droite */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services-style-2 .card.left {
+  align-self: flex-start; /* Aligne la carte à gauche */
+}
+
+.services-style-2 .card.right {
+  align-self: flex-end; /* Aligne la carte à droite */
+}
+
+.services-style-2 .card h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color, #333); /* Couleur principale */
+}
+
+.services-style-2 .card p {
+  font-size: 14px;
+  color: var(--primary-color, #555); /* Couleur principale */
+}
