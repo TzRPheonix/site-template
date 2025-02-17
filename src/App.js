@@ -4,6 +4,7 @@ import Menu from './pages/Menu/Menu';
 import Creator from './pages/Creator/Creator';
 import TemplateProjet1 from './pages/SavedPage/TemplateProjet1';
 import TemplateProjet2 from './pages/SavedPage/TemplateProjet2';
+import TemplateProjet3 from './pages/SavedPage/TemplateProjet3';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/creator" element={<Creator />} />
         <Route path="/savedPage/TemplateProjet1" element={<TemplateProjet1 />} />
         <Route path="/savedPage/TemplateProjet2" element={<TemplateProjet2 />} />
+        <Route path="/savedPage/TemplateProjet3" element={<TemplateProjet3 />} />
       </Routes>
     </BrowserRouter>
   );
