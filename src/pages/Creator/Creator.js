@@ -110,56 +110,88 @@ const Creator = () => {
     }
   };
 
-  const generateFileContent = () => {
+  const askForTemplateName = () => {
+    let name = "";
+    while (!name) {
+      name = prompt("Veuillez entrer un nom pour le template :");
+      if (!name) alert("Le nom du template est obligatoire.");
+    }
+    return name;
+  };
+
+  const generateFileContent = (name) => {
+    if (!name) return "";
+    
     const imports = [];
     const components = [];
-  
+
     if (selectedHeader) {
-      imports.push(`import { ${selectedHeader.type.name} } from "../../components/headers/${selectedHeader.type.name}";`);
-      components.push(`<${selectedHeader.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`);
+      imports.push(
+        `import { ${selectedHeader.type.name} } from "../../components/headers/${selectedHeader.type.name}";`
+      );
+      components.push(
+        `<${selectedHeader.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`
+      );
     }
     if (selectedService) {
-      imports.push(`import { ${selectedService.type.name} } from "../../components/services/${selectedService.type.name}";`);
-      components.push(`<${selectedService.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`);
+      imports.push(
+        `import { ${selectedService.type.name} } from "../../components/services/${selectedService.type.name}";`
+      );
+      components.push(
+        `<${selectedService.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`
+      );
     }
     if (selectedTestimonial) {
-      imports.push(`import { ${selectedTestimonial.type.name} } from "../../components/testimonials/${selectedTestimonial.type.name}";`);
-      components.push(`<${selectedTestimonial.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`);
+      imports.push(
+        `import { ${selectedTestimonial.type.name} } from "../../components/testimonials/${selectedTestimonial.type.name}";`
+      );
+      components.push(
+        `<${selectedTestimonial.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`
+      );
     }
     if (selectedFooter) {
-      imports.push(`import { ${selectedFooter.type.name} } from "../../components/footers/${selectedFooter.type.name}";`);
-      components.push(`<${selectedFooter.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`);
+      imports.push(
+        `import { ${selectedFooter.type.name} } from "../../components/footers/${selectedFooter.type.name}";`
+      );
+      components.push(
+        `<${selectedFooter.type.name} primaryColor={"${primaryColor}"} secondaryColor={"${secondaryColor}"} />`
+      );
     }
-  
+
     return `import React from 'react';
-  ${imports.join("\n")}
-  
-  export default function GeneratedPage() {
-    return (
-      <>
-        ${components.join("\n      ")}
-      </>
-    );
-  }`;
+${imports.join("\n")}
+
+export default function Template${name.replace(/\s+/g, "")}() {
+  return (
+    <>
+      ${components.join("\n      ")}
+    </>
+  );
+}`;
   };
-  
+
   const handleSendEmail = () => {
-    const fileContent = generateFileContent();
-    const mailtoLink = `mailto:?subject=Generated%20React%20Component&body=${encodeURIComponent(fileContent)}`;
+    const name = askForTemplateName();
+    const fileContent = generateFileContent(name);
+    if (!fileContent) return;
+    const mailtoLink = `mailto:?subject=Template%20pour%20${name}&body=${encodeURIComponent(
+      fileContent
+    )}`;
     window.location.href = mailtoLink;
   };
-  
+
   const handleDownloadFile = () => {
-    const fileContent = generateFileContent();
+    const name = askForTemplateName();
+    const fileContent = generateFileContent(name);
+    if (!fileContent) return;
     const blob = new Blob([fileContent], { type: "text/javascript" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "GeneratedPage.js";
+    a.download = `Template${name.replace(/\s+/g, "")}.js`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    alert("Téléchargez le fichier et attachez-le à votre email.");
   };
 
   return (

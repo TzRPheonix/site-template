@@ -1,52 +1,94 @@
 .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .pages-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .page-box {
-    width: 150px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #585191;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    background: #f8f9fa;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .page-box:hover {
-    transform: scale(1.05);
-  }
-  
-  .add-page-box {
-    width: 150px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #585191;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #585191;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-  }
-  
-  .add-page-box:hover {
-    background: rgba(88, 81, 145, 0.1);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #e0e7ff, #f4f4f8);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.menu-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.page-box {
+  width: 180px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  background: #ffffff;
+  color: #585191;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 5px 15px rgba(88, 81, 145, 0.15);
+  border: 2px solid transparent;
+}
+
+.page-box:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(88, 81, 145, 0.3);
+  border-color: #585191;
+}
+
+.page-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.add-page-box {
+  width: 180px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #585191;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #585191;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 5px 15px rgba(88, 81, 145, 0.15);
+  text-decoration: none;
+}
+
+.add-page-box:hover {
+  background: rgba(88, 81, 145, 0.1);
+  transform: scale(1.07);
+}
+
+.add-icon {
+  font-size: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.add-page-box:hover .add-icon {
+  transform: rotate(360deg);
+}
+
+.no-pages {
+  font-size: 16px;
+  color: #777;
+  font-style: italic;
+}
