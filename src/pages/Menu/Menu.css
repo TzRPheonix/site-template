@@ -1,0 +1,52 @@
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .page-box {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #585191;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .page-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .add-page-box {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #585191;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #585191;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .add-page-box:hover {
+    background: rgba(88, 81, 145, 0.1);
+  }
+  
