@@ -11,11 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Menu />} />
-        <Route path="/creator" element={<Creator />} />
-        <Route path="/savedPage/TemplateProjet1" element={<TemplateProjet1 />} />
-        <Route path="/savedPage/TemplateProjet2" element={<TemplateProjet2 />} />
-        <Route path="/savedPage/TemplateProjet3" element={<TemplateProjet3 />} />
+        <Route path="/site-template" element={<Menu />} />
+        <Route path="/site-template/creator" element={<Creator />} />
+        <Route path="/site-template/savedPage/TemplateProjet1" element={<TemplateProjet1 />} />
+        <Route path="/site-template/savedPage/TemplateProjet2" element={<TemplateProjet2 />} />
+        <Route path="/site-template/savedPage/TemplateProjet3" element={<TemplateProjet3 />} />
       </Routes>
     </BrowserRouter>
   );

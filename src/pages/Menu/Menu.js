@@ -15,7 +15,7 @@ const Menu = () => {
   }, []);
 
   const openPageInNewTab = (file) => {
-    window.open(`/savedPage/${file}`, "_blank");
+    window.open(`/site-template/savedPage/${file}`, "_blank");
   };
 
   return (
@@ -31,7 +31,7 @@ const Menu = () => {
         ) : (
           <p className="no-pages">Aucune page générée pour le moment.</p>
         )}
-        <a href="/Creator" className="add-page-box">
+        <a href="/site-template/Creator" className="add-page-box">
           <span className="add-icon">+</span>
         </a>
       </div>
